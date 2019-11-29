@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Milk Landing</title>
+    <link
+      rel="stylesheet"
+      media="screen"
+      type="text/css"
+      href="stylesheet.css"
+    />
+    <!-- <link rel="shortcut icon" href="images/favicon.ico" /> -->
+  </head>
+  <body>
+    <header>
+      <div id="nav">
+        <a class="logo" href="index.html"
+          ><img src="images/logo.png" height="30px"
+        /></a>
+        <a class="home" href="">Screen Shot</a>
+        <a class="home" href="">Feature</a>
+        <a class="home" href="">Home</a>
+      </div>
+    </header>
+    <main>
+      <div id="back"></div>
+      <div id="top">
+        <div class="topimg">
+          <img src="images/top_phone.png" height="550px" />
+        </div>
+        <div class="toptext">
+          <p class="text1">Shared <br />housekeeping book</p>
+          <p class="text2">
+            The habit of managing money,<br />Make it together!
+          </p>
+          <div class="downBtn">
+            <img src="images/downBtn.png" height="55px" />
+          </div>
+        </div>
+      </div>
+      <p id="title1">FEATURE</p>
+      <div id="feature">
+        <div class="featureLeft">
+          <div class="demo2 cursor" onmouseover="currentSlide(1)">
+            <img src="images/icon_1-1.png" height="70px" /><img
+              src="images/icon_1-2.png"
+              height="70px"
+            />
+            <p>Easy input!<br />quickly open and<br />Enter right away.</p>
+          </div>
+          <div class="demo cursor" onmouseover="currentSlide(2)">
+            <img src="images/icon_2-1.png" height="70px" /><img
+              src="images/icon_2-2.png"
+              height="70px"
+            />
+            <p>See at a glance UI<br />Use it conveniently.</p>
+          </div>
+        </div>
+        <div class="mySlides">
+          <img src="images/feature_phone.png" height="780px" />
+        </div>
+        <div class="mySlides">
+          <img src="images/feature_phone.png" height="780px" />
+        </div>
+        <div class="mySlides">
+          <img src="images/feature_phone.png" height="780px" />
+        </div>
+        <div class="mySlides">
+          <img src="images/feature_phone.png" height="780px" />
+        </div>
+        <div class="featureRight">
+          <div class="demo cursor" onmouseover="currentSlide(3)">
+            <img src="images/icon_3-1.png" height="70px" /><img
+              src="images/icon_3-2.png"
+              height="70px"
+            />
+            <p>
+              Friends, lovers,<br />and family.<br />Share to make good<br />habits.
+            </p>
+          </div>
+          <div class="demo cursor" onmouseover="currentSlide(4)">
+            <img src="images/icon_4-1.png" height="70px" /><img
+              src="images/icon_4-2.png"
+              height="70px"
+            />
+            <p>With a beautiful design<br />Use it every day.</p>
+          </div>
+        </div>
+      </div>
+      <p id="title2">SCREEN SHOT</p>
+      <div id="screenshot">
+        <a class="prev" onclick="plusSlides(-1)" href="#">&#10094;</a>
+        <div class="s-img">
+          <img src="images/screenshot_01.png" />
+          <img src="images/screenshot_01.png" />
+          <img src="images/screenshot_01.png" />
+        </div>
+        <a class="next" onclick="plusSlides(1)" href="#">&#10095;</a>
+      </div>
+    </main>
+    <footer>
+      <div id="footer">
+        <div id="fotterDownBtn">
+          <img src="images/downBtn.png" height="40px" />
+        </div>
+        <a class="footer_logo" href="index.html"
+          ><img src="images/footer_logo.png" height="30px"/></a
+        ><br />
+        <a href="privacy_policy.html">privacy policy </a>
+        <a href="privacy_policy.html">| ios.milkteam@gmail.com </a>
+        <p>Copyright @2019 Milk. All right reserved.</p>
+      </div>
+    </footer>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </body>
+</html>
