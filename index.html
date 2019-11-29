@@ -43,7 +43,7 @@
       <p id="title1">FEATURE</p>
       <div id="feature">
         <div class="featureLeft">
-          <div class="demo2 cursor" onmouseover="currentSlide(1)">
+          <div class="demo cursor" onmouseover="currentSlide(1)">
             <img src="images/icon_1-1.png" class="image1" height="70px" />
             <img src="images/icon_1-2.png" class="image2" height="70px" />
             <p>Easy input!<br />quickly open and<br />Enter right away.</p>
@@ -75,10 +75,8 @@
             </p>
           </div>
           <div class="demo cursor" onmouseover="currentSlide(4)">
-            <img src="images/icon_4-1.png" height="70px" /><img
-              src="images/icon_4-2.png"
-              height="70px"
-            />
+            <img src="images/icon_4-1.png" class="image1" height="70px" />
+            <img src="images/icon_4-2.png" class="image2" height="70px" />
             <p>With a beautiful design<br />Use it every day.</p>
           </div>
         </div>
@@ -118,7 +116,7 @@
       function showSlides(n) {
         var i;
         var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("demo");
+        // var dots = document.getElementsByClassName("demo");
         if (n > slides.length) {
           slideIndex = 1;
         }
@@ -128,11 +126,11 @@
         for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
         }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
+        // for (i = 0; i < dots.length; i++) {
+        //   dots[i].className = dots[i].className.replace(" active", "");
+        // }
         slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
+        // dots[slideIndex - 1].className += " active";
       }
     </script>
   </body>
