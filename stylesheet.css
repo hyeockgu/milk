@@ -119,19 +119,22 @@ body {
   color: #39658b;
 }
 
-.demo:hover img:last-child {
+.demo .image1 {
   display: inline-block;
 }
-
-.demo:hover img:first-child {
+.demo:hover .image1 {
   display: none;
 }
-
+.demo .image2 {
+  display: none;
+}
+.demo:hover .image2 {
+  display: inline-block;
+}
 .active,
 .demo:hover {
   color: #e64843;
 }
-
 .featureLeft {
   text-align: right;
   margin-top: 50px;
