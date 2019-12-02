@@ -159,19 +159,18 @@ body {
 .container {
   display: inline-block;
   position: relative;
-  left: 20%;
-  width: 1024px;
-  margin-left: auto;
-  margin-right: auto;
+  left: 22%;
 }
 .wrapper {
   display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 .wrapper img {
   margin-left: 15px;
   margin-right: 15px;
   height: 500px;
-  float: left;
 }
 /* .prev,
 .next {
