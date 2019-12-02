@@ -11,9 +11,20 @@
       type="text/css"
       href="stylesheet.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <!-- <link rel="shortcut icon" href="images/favicon.ico" /> -->
   </head>
   <body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
     <header>
       <div id="nav">
         <a class="logo" href="index.html"
@@ -82,14 +93,35 @@
         </div>
       </div>
       <p id="title2">SCREEN SHOT</p>
-      <div id="screenshot">
-        <a class="prev" onclick="plusSlides(-1)" href="#">&#10094;</a>
-        <div class="s-img">
-          <img src="images/screenshot_01.png" />
-          <img src="images/screenshot_01.png" />
-          <img src="images/screenshot_01.png" />
+
+      <div class="container">
+        <div class="wrapper">
+          <img src="images/screenshot_01.png" /><img
+            src="images/screenshot_01.png"
+          /><img src="images/screenshot_01.png" />
         </div>
-        <a class="next" onclick="plusSlides(1)" href="#">&#10095;</a>
+        <div class="wrapper">
+          <img src="images/screenshot_01.png" /><img
+            src="images/screenshot_01.png"
+          /><img src="images/screenshot_01.png" />
+        </div>
+        <div class="wrapper">
+          <img src="images/screenshot_01.png" /><img
+            src="images/screenshot_01.png"
+          /><img src="images/screenshot_01.png" />
+        </div>
+        <!-- <div class="wrapper">
+          <div><img src="images/feature_phone.png" /></div>
+          <div><img src="images/screenshot_01.png" /></div>
+          <div><img src="images/screenshot_01.png" /></div>
+        </div> -->
+      </div>
+      <!-- <a class="prev" onclick="plusSlides(-1)" href="#">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)" href="#">&#10095;</a> -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
       </div>
     </main>
     <footer>
@@ -112,11 +144,9 @@
       function currentSlide(n) {
         showSlides((slideIndex = n));
       }
-
       function showSlides(n) {
         var i;
         var slides = document.getElementsByClassName("mySlides");
-        // var dots = document.getElementsByClassName("demo");
         if (n > slides.length) {
           slideIndex = 1;
         }
@@ -126,12 +156,66 @@
         for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
         }
-        // for (i = 0; i < dots.length; i++) {
-        //   dots[i].className = dots[i].className.replace(" active", "");
-        // }
         slides[slideIndex - 1].style.display = "block";
-        // dots[slideIndex - 1].className += " active";
       }
+    </script>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("wrapper");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+    <script>
+      new Swiper(".swiper-container", {
+        slidesPerView: 3, // 동시에 보여줄 슬라이드 갯수
+        spaceBetween: 30, // 슬라이드간 간격
+        slidesPerGroup: 3, // 그룹으로 묶을 수, slidesPerView 와 같은 값을 지정하는게 좋음
+
+        // 그룹수가 맞지 않을 경우 빈칸으로 메우기
+        // 3개가 나와야 되는데 1개만 있다면 2개는 빈칸으로 채워서 3개를 만듬
+        loopFillGroupWithBlank: true,
+
+        loop: true, // 무한 반복
+
+        pagination: {
+          // 페이징
+          el: ".swiper-pagination",
+          clickable: true // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+        },
+        navigation: {
+          // 네비게이션
+          nextEl: ".swiper-button-next", // 다음 버튼 클래스명
+          prevEl: ".swiper-button-prev" // 이번 버튼 클래스명
+        }
+      });
     </script>
   </body>
 </html>
