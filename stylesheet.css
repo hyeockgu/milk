@@ -96,12 +96,8 @@ body {
 #feature img {
   margin-top: 20px;
 }
-.feature2 {
-  margin-top: 45px;
-}
 #feature p {
   font-size: 1.2em;
-  /* color: #39658b; */
   font-weight: bold;
   line-height: 1.2;
   margin-top: 10px;
@@ -245,7 +241,7 @@ footer {
   #back {
     width: 100%;
     position: absolute;
-    height: 950px;
+    height: 1000px;
     background-color: #ffffff;
     background-size: 50% auto;
     z-index: -10;
@@ -270,7 +266,7 @@ footer {
   }
   .topimg img {
     margin-left: 0;
-    height: 500px;
+    height: 450px;
   }
   .toptext {
     flex-direction: column;
@@ -294,7 +290,39 @@ footer {
     margin-top: -50px;
     text-align: center;
   }
-
+  #title1 {
+    color: #e64843;
+    display: block;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 800;
+    align-items: center;
+    margin-top: 100px;
+  }
+  #feature {
+    display: inline-block;
+    /* justify-content: center; */
+  }
+  #feature img {
+    float: left;
+    margin: 10px 20px;
+  }
+  #feature p {
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  .featureLeft {
+    text-align: left;
+    margin-top: 0px;
+    float: left;
+  }
+  .featureRight {
+    text-align: left;
+    margin-top: 0px;
+    float: left;
+    margin-left: 0px;
+  }
   .mySlides {
     display: none !important;
   }
