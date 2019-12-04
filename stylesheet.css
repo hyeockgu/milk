@@ -240,3 +240,62 @@ footer {
   float: right;
   margin-top: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+  #back {
+    width: 100%;
+    position: absolute;
+    height: 950px;
+    background-color: #ffffff;
+    background-size: 50% auto;
+    z-index: -10;
+    margin-top: 330px;
+  }
+  #nav {
+    height: 50px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1em;
+  }
+  #top {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+  }
+  .topimg {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .topimg img {
+    margin-left: 0;
+    height: 500px;
+  }
+  .toptext {
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .text1 {
+    color: #e64843;
+    font-weight: 800;
+    font-size: 3em;
+    font-variant-caps: all-petite-caps;
+    line-height: 0.7;
+    margin-top: 10px;
+    text-align: center;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .downBtn {
+    display: block;
+    margin-top: -50px;
+    text-align: center;
+  }
+
+  .mySlides {
+    display: none !important;
+  }
+}
