@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Milk Landing</title>
     <link
@@ -11,14 +14,17 @@
       type="text/css"
       href="stylesheet.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" href="css/bootstrap.css" /> -->
+
     <!-- <link rel="shortcut icon" href="images/favicon.ico" /> -->
   </head>
   <body>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
     <header>
       <div id="nav">
         <a class="logo" href="index.html"
@@ -85,27 +91,92 @@
         </div>
       </div>
       <p id="title2">SCREEN SHOT</p>
-      <div class="container">
-        <div class="wrapper">
-          <img src="images/screenshot_01.png" /><img
-            src="images/screenshot_01.png"
-          /><img src="images/screenshot_01.png" />
+      <div class="ss">
+        <div class="container-xl">
+          <div
+            id="carouselExample"
+            class="carousel slide"
+            data-ride="carousel"
+            data-interval="9000"
+          >
+            <div class="carousel-inner row w-100 mx-auto" role="listbox">
+              <div class="carousel-item col-md-3 active">
+                <img
+                  class="img-fluid mx-auto d-block"
+                  src="images/screenshot_01.png"
+                  alt="slide 1"
+                />
+              </div>
+              <div class="carousel-item col-md-3">
+                <img
+                  class="img-fluid mx-auto d-block"
+                  src="images/screenshot_01.png"
+                  alt="slide 2"
+                />
+              </div>
+              <div class="carousel-item col-md-3">
+                <img
+                  class="img-fluid mx-auto d-block"
+                  src="images/screenshot_01.png"
+                  alt="slide 3"
+                />
+              </div>
+              <div class="carousel-item col-md-3">
+                <img
+                  class="img-fluid mx-auto d-block"
+                  src="images/screenshot_01.png"
+                  alt="slide 4"
+                />
+              </div>
+              <div class="carousel-item col-md-3">
+                <img
+                  class="img-fluid mx-auto d-block"
+                  src="images/screenshot_01.png"
+                  alt="slide 5"
+                />
+              </div>
+              <div class="carousel-item col-md-3">
+                <img
+                  class="img-fluid mx-auto d-block"
+                  src="images/screenshot_01.png"
+                  alt="slide 6"
+                />
+              </div>
+              <div class="carousel-item col-md-3">
+                <img
+                  class="img-fluid mx-auto d-block"
+                  src="images/screenshot_01.png"
+                  alt="slide 7"
+                />
+              </div>
+              <div class="carousel-item col-md-3">
+                <img
+                  class="img-fluid mx-auto d-block"
+                  src="images/screenshot_01.png"
+                  alt="slide 7"
+                />
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#carouselExample"
+              role="button"
+              data-slide="prev"
+            >
+              <i class="fa fa-chevron-left fa-lg text-muted"></i>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next text-faded"
+              href="#carouselExample"
+              role="button"
+              data-slide="next"
+            >
+              <i class="fa fa-chevron-right fa-lg text-muted"></i>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
         </div>
-        <div class="wrapper">
-          <img src="images/screenshot_01.png" /><img
-            src="images/screenshot_01.png"
-          /><img src="images/screenshot_01.png" />
-        </div>
-        <div class="wrapper">
-          <img src="images/screenshot_01.png" /><img
-            src="images/screenshot_01.png"
-          /><img src="images/screenshot_01.png" />
-        </div>
-      </div>
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
       </div>
     </main>
     <footer>
@@ -121,6 +192,24 @@
         <p>Copyright @2019 Milk. All right reserved.</p>
       </div>
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script> -->
+
     <script>
       var slideIndex = 1;
       showSlides(slideIndex);
@@ -144,38 +233,28 @@
       }
     </script>
     <script>
-      var slideIndex = 1;
-      showSlides(slideIndex);
+      $("#carouselExample").on("slide.bs.carousel", function(e) {
+        var $e = $(e.relatedTarget);
+        var idx = $e.index();
+        var itemsPerSlide = 8;
+        var totalItems = $(".carousel-item").length;
 
-      // Next/previous controls
-      function plusSlides(n) {
-        showSlides((slideIndex += n));
-      }
-
-      // Thumbnail image controls
-      function currentSlide(n) {
-        showSlides((slideIndex = n));
-      }
-
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("wrapper");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-          slideIndex = 1;
+        if (idx <= totalItems - (itemsPerSlide - 1)) {
+          var it = itemsPerSlide - (totalItems - idx);
+          for (var i = 0; i < it; i++) {
+            // append slides to end
+            if (e.direction == "left") {
+              $(".carousel-item")
+                .eq(i)
+                .appendTo(".carousel-inner");
+            } else {
+              $(".carousel-item")
+                .eq(0)
+                .appendTo(".carousel-inner");
+            }
+          }
         }
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-      }
+      });
     </script>
   </body>
 </html>
