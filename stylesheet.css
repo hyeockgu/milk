@@ -302,9 +302,12 @@ footer {
     display: flex;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
   }
   .topimg img {
     height: 450px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .toptext {
     flex-direction: column;
@@ -383,7 +386,7 @@ footer {
     font-size: 2.5em;
     font-weight: 800;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 60px;
   }
   .ss {
     margin-left: auto;
