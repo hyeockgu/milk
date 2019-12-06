@@ -38,6 +38,7 @@ body {
 #nav .logo {
   float: left;
   display: block;
+  margin-left: 30px;
 }
 /* top */
 #top {
@@ -156,6 +157,44 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+/* 푸터 */
+footer {
+  margin-top: 100px;
+  background-color: #39658b;
+  height: 120px;
+  display: block;
+  margin-bottom: 0;
+}
+#footer {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+}
+.footer_logo {
+  margin-left: 30px;
+}
+#footer a {
+  text-decoration: none;
+  color: #aebdca;
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-right: 5px;
+}
+.link_text {
+  margin-left: 30px;
+}
+#footer p {
+  color: #aebdca;
+  font-size: 0.8em;
+  margin-left: 30px;
+}
+#fotterDownBtn {
+  float: right;
+  margin-top: 20px;
+  margin-right: 30px;
+}
+
 @media (min-width: 768px) {
   /* show 3 items */
   .carousel-inner .active,
@@ -233,40 +272,12 @@ body {
     visibility: visible;
   }
 }
-/* 푸터 */
-footer {
-  margin-top: 100px;
-  background-color: #39658b;
-  height: 120px;
-  display: block;
-  margin-bottom: 0;
-}
-#footer {
-  max-width: 1024px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 20px;
-}
-#footer a {
-  text-decoration: none;
-  color: #aebdca;
-  font-weight: bold;
-  font-size: 0.8em;
-}
-#footer p {
-  color: #aebdca;
-  font-size: 0.8em;
-}
-#fotterDownBtn {
-  float: right;
-  margin-top: 20px;
-}
 
 @media only screen and (max-width: 768px) {
   #back {
     width: 100%;
     position: absolute;
-    height: 1000px;
+    height: 970px;
     background-color: #ffffff;
     background-size: 50% auto;
     z-index: -10;
@@ -279,18 +290,20 @@ footer {
     margin-right: auto;
     font-size: 1.1em;
   }
+  /* top */
   #top {
     display: block;
-    width: 100%;
-    margin-top: 0;
+    max-width: 100;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
   }
   .topimg {
-    width: 100%;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
   }
   .topimg img {
-    margin-left: 0;
     height: 450px;
   }
   .toptext {
@@ -302,19 +315,28 @@ footer {
   .text1 {
     color: #e64843;
     font-weight: 800;
-    font-size: 3em;
+    font-size: 2.5em;
     font-variant-caps: all-petite-caps;
     line-height: 0.7;
-    margin-top: 10px;
+    margin-top: 30px;
     text-align: center;
     margin-left: 0;
     padding-left: 0;
   }
-  .downBtn {
-    display: block;
-    margin-top: -50px;
+  .text2 {
+    color: #95c9f5;
+    font-size: 1.2em;
+    margin-top: 20px;
+    line-height: 1.2;
+    font-weight: bold;
     text-align: center;
   }
+  .downBtn {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+  }
+  /* 기능 */
   #title1 {
     color: #e64843;
     display: block;
@@ -322,7 +344,7 @@ footer {
     font-size: 2.5em;
     font-weight: 800;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 50px;
   }
   #feature {
     display: inline-block;
@@ -341,14 +363,71 @@ footer {
     text-align: left;
     margin-top: 0px;
     float: left;
+    margin-right: 30px;
   }
   .featureRight {
     text-align: left;
     margin-top: 0px;
     float: left;
     margin-left: 0px;
+    margin-right: 30px;
   }
   .mySlides {
     display: none !important;
+  }
+  /* 스크린샷 */
+  #title2 {
+    color: #e64843;
+    display: block;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 800;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .ss {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+  }
+  /* 푸터 */
+  footer {
+    margin-top: 100px;
+    background-color: #39658b;
+    height: 120px;
+    display: block;
+    margin-bottom: 0;
+  }
+  #footer {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+  }
+  .footer_logo {
+    margin-left: 30px;
+  }
+  #footer a {
+    text-decoration: none;
+    color: #aebdca;
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-right: 5px;
+  }
+  .link_text {
+    margin-left: 30px;
+  }
+  #footer p {
+    color: #aebdca;
+    font-size: 0.8em;
+    margin-left: 30px;
+  }
+  #fotterDownBtn {
+    float: right;
+    margin-right: 30px;
+    margin-top: 0px;
+  }
+  #fotterDownBtn img {
+    height: 30px;
   }
 }
